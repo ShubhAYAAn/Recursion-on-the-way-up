@@ -19,11 +19,22 @@ public class Main {
     }
 
     public static void printStairPaths(int n, String path) {
+         if(n<0)
+        {
+            return;
+        }
+        
         if(n == 0){
             System.out.println(path);
             return;
         }
         
+       //printStairPaths(n-1, path + "1");
+       //printStairPaths(n-2, path + "2");
+       //printStairPaths(n-3, path + "3");
+                     
+                      OR
+                      
         for(int step = 1; step <= 3; step++){
             if(n-step >= 0)
                 printStairPaths(n-step, path+step);
